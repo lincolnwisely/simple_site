@@ -1,0 +1,64 @@
+$purple:#BE20E2;
+$lincoln_black: #48424A;
+
+html {
+  font-size: 18px;
+  font-family: 'Helvetica', sans-serif;
+  color: $lincoln_black;
+}
+
+body {
+  @include prefix(display, flex, webkit ms);
+  @include prefix(flex-direction, column, webkit ms);
+  @include prefix(justify-content, space-between, webkit ms);
+  height: 100vh;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0px auto 30px;
+  border-bottom: 1px solid $lincoln_black;
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+footer {
+  width: 100%;
+  margin: 20px 0;
+
+  .container {
+    @include prefix(display, flex, webkit ms);
+    @include prefix(flex-direction, column, webkit ms);
+    border-bottom: none;
+    margin-bottom: 0;
+
+    @include bp(sm) {
+      @include prefix(flex-direction, row, webkit ms);
+      @include prefix(justify-content, space-between, webkit ms);
+
+    }
+  }
+
+  ul {
+    @include prefix(display, flex, webkit ms);
+    padding: 0;
+
+    li {
+      margin-right: 20px;
+      list-style: none;
+    }
+  }
+}
